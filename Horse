@@ -12,7 +12,7 @@ bool check(int i, int j){ // we're in array boudary and this array cell is free
 };
 bool move(int i, int j, int n){
     arr[i][j]=n;
-    if (n>x*y-1) return true;
+    if (n>x*y-1) return true; // the latest validate of algorithm execution
     if (check(i+1,j+2) && move(i+1,j+2,n++)) return true;
     if (check(i+1,j-2) && move(i+1,j-2,n++)) return true;
     if (check(i+2,j+1) && move(i+2,j+1,n++)) return true;
