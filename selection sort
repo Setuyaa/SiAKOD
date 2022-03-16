@@ -1,0 +1,27 @@
+//  main.cpp
+//  Selection sort
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int n=10;
+    int a[n]={7,1,4,90,45,12,1,411,11,15};
+    int min;
+    int minj;
+    int k;
+    for (int i=0;i<n;i++){
+        min=a[i];
+        for (int j=i+1;j<n;j++)
+            if (a[j]<min) {min =a[j];minj=j;}
+        if (a[i]>min)
+        {
+            k=a[i];
+            a[i]=min;
+            a[minj]=k;
+        }
+    }
+    for (int i=0;i<n;i++)
+        cout<< a[i] << " ";
+    return 0;
+}
